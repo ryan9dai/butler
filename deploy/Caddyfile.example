@@ -1,0 +1,5 @@
+# Proposed addition only. Requires explicit approval before editing/reloading Caddy.
+:3501 {
+    bind 100.64.0.7
+    reverse_proxy 127.0.0.1:3501
+}

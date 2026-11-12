@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eu
+cd "$(dirname "$0")/.."
+mkdir -p var
+chmod 700 var
+if tmux has-session -t butler-dev 2>/dev/null; then echo 'butler-dev already exists'; exit 0; fi
+if lsof -nP -iTCP:3501 -sTCP:LISTEN >/dev/null; then echo 'Port 3501 occupied'; exit 1; fi
+tmux new-session -d -s butler-dev "'$PWD/scripts/run' >> '$PWD/var/service.log' 2>&1"
+echo 'Started butler-dev; check curl http://127.0.0.1:3501/api/health'

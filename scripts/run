@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+cd "$(dirname "$0")/.."
+umask 077
+if [ -f .env ]; then set -a; . ./.env; set +a; fi
+exec .venv/bin/uvicorn butler.app:create_app --factory --host 127.0.0.1 --port 3501 --no-access-log

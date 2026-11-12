@@ -1,0 +1,3 @@
+#!/bin/sh
+set -eu
+tmux kill-session -t butler-dev
