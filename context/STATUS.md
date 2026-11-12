@@ -1,7 +1,8 @@
 # Current handoff — 2026-11-12
 
 Foundation implemented and internally verified; user confirmation pending.
-Initial commit planned: `feat: establish private persistent Butler foundation`.
+Foundation committed as `e8802c6` (`feat: establish private persistent Butler foundation`).
+GitHub origin configured: `git@github.com:ryan9dai/butler.git`; initial push requested.
 
 ## Running
 

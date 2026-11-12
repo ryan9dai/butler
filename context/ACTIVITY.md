@@ -12,3 +12,7 @@
   PAO continuous/sleep evolution documented without autonomous processing.
   Ten tests and TypeScript/Vite build pass; live local-model workflow and actual
   process-restart persistence checked. Windows and visual user confirmation pending.
+- 2026-11-12: Configured the user-requested GitHub origin at
+  `git@github.com:ryan9dai/butler.git`; SSH access succeeded and the remote was
+  empty before initial push. Corrected the stale planned-commit handoff. Existing
+  launch instructions reviewed; no application code changed or tests rerun.
